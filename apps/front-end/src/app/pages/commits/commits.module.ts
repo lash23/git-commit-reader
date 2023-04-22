@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CommitsRoutingModule } from './commits-routing.module';
 import { CommitsComponent } from './commits.component';
+import { SharedModule } from '../../shared/shared.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { CommitsComponent } from './commits.component';
   ],
   imports: [
     CommonModule,
-    CommitsRoutingModule
+    CommitsRoutingModule,
+    SharedModule
   ]
 })
 export class CommitsModule { }
