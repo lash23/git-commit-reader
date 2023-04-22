@@ -1,0 +1,31 @@
+<tr class="text-sm leading-none text-gray-600 h-16 flex">
+  <td class="w-1/2">
+    <div class="flex items-center">
+      <a [href]="committerPage" target="_blank">
+        <img [src]="avatar" [alt]="author" />
+      </a>
+      <div class="pl-2">
+        <a
+          class="text-sm font-medium leading-none text-gray-800"
+          [href]="commitUrl"
+          target="_blank"
+        >
+          {{ message }}
+        </a>
+        <p class="text-xs leading-3 text-gray-600 mt-2">
+          {{ author }}
+        </p>
+      </div>
+    </div>
+  </td>
+  <td>
+    <span class="bg-pink-100 text-pink-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-pink-900 dark:text-pink-300">
+      {{ sha }}
+    </span>
+  </td>
+  <td>
+    <p class="pl-16">
+      {{ date | date }}
+    </p>
+  </td>
+</tr>
