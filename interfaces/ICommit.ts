@@ -1,9 +1,9 @@
 import { ICommitAuthor } from "./ICommitAuthor";
-import { ICommiter } from "./ICommitter";
+import { ICommitter } from "./ICommitter";
 
 export interface ICommit {
   author: ICommitAuthor;
-  committer: ICommiter;
+  committer: ICommitter;
   message: string;
   url: string;
   comment_count: number;
