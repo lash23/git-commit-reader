@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { PageTitleComponent } from './components/page-title/page-title.component';
 import { TableItemComponent } from './components/table-item/table-item.component';
 import { TableComponent } from './components/table/table.component';
 
@@ -7,6 +8,7 @@ import { TableComponent } from './components/table/table.component';
 
 @NgModule({
   declarations: [
+    PageTitleComponent,
     TableItemComponent,
     TableComponent
   ],
@@ -14,6 +16,7 @@ import { TableComponent } from './components/table/table.component';
     CommonModule
   ],
   exports: [
+    PageTitleComponent,
     TableItemComponent,
     TableComponent,
   ]
