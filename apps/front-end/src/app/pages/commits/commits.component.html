@@ -1,7 +1,8 @@
 <div class="xl:w-3/4 2xl:w-4/5 w-full mx-auto">
   <git-commit-reader-page-title [title]="'Git Commit Reader'">
   </git-commit-reader-page-title>
-  <div class="bg-white px-4 md:px-10 pb-5">
+
+  <div class="bg-white px-4 md:px-10 pb-5 pt-10">
     <git-commit-reader-table *ngIf="commits.length" [commits]="commits">
     </git-commit-reader-table>
   </div>

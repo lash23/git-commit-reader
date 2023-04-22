@@ -20,7 +20,6 @@ export class CommitsComponent implements OnInit {
   listCommits() {
     this.commitsService.listCommits().subscribe(res => {
       this.commits = res;
-      console.log('commits 1', this.commits);
     })
   }
 }
