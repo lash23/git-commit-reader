@@ -16,7 +16,7 @@ export class CommitsController {
 
       return res.json({data});
     } catch (error) {
-      return res.status(error.response.status).json(error.response.data)
+      return res.status(error.response?.status || error.status).json(error.response?.data)
     }
   }
 }
