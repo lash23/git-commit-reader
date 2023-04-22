@@ -1,0 +1,11 @@
+<div class="overflow-x-auto">
+  <table class="w-full whitespace-nowrap">
+    <tbody>
+      <git-commit-reader-table-item
+        *ngFor="let commit of commits"
+        [commit]="commit"
+        class="block">
+      </git-commit-reader-table-item>
+    </tbody>
+  </table>
+</div>
