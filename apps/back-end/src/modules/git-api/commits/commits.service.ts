@@ -14,7 +14,7 @@ export class CommitsService {
 
     return lastValueFrom(
       this.httpService
-        .get(`${url}/commits`)
+        .get(`${url}/commits?per_page=100`)
         .pipe(map((response: AxiosResponse) => response.data as IListCommitItem[]))
     );
   }
