@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TableItemComponent } from './table-item.component';
 import { IListCommitItem } from '../../../../../../../interfaces/IListCommitItem';
+import { SharedModule } from '../../shared.module';
 
 const commitListItemMock: IListCommitItem = {
   comments_url: '',
@@ -40,7 +41,8 @@ describe('TableItemComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TableItemComponent ]
+      declarations: [ TableItemComponent ],
+      imports: [SharedModule]
     })
     .compileComponents();
 
