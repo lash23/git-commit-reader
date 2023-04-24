@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterContentChecked, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CommitsService } from '../../services/commits.service';
 import { IListCommitItem } from "../../../../../../interfaces/IListCommitItem";
 @Component({
@@ -6,12 +6,17 @@ import { IListCommitItem } from "../../../../../../interfaces/IListCommitItem";
   templateUrl: './commits.component.html',
   styleUrls: ['./commits.component.scss']
 })
-export class CommitsComponent implements OnInit {
+export class CommitsComponent implements OnInit, AfterContentChecked {
   commits: IListCommitItem[] = [];
 
   constructor(
-    private commitsService: CommitsService
+    private commitsService: CommitsService,
+    private changeDetector: ChangeDetectorRef,
   ) {}
+
+  ngAfterContentChecked(): void {
+    this.changeDetector.detectChanges();
+  }
 
   ngOnInit(): void {
     this.listCommits();
@@ -20,7 +25,6 @@ export class CommitsComponent implements OnInit {
   listCommits() {
     this.commitsService.listCommits().subscribe(res => {
       this.commits = res;
-      console.log('commits 1', this.commits);
     })
   }
 }

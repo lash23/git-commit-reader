@@ -29,7 +29,12 @@ describe('CommitsService', () => {
     sha: 'sha',
     node_id: 'node_id',
     url: 'url',
-    html_url: 'html_url'
+    html_url: 'html_url',
+    committer: {
+      date: 'date',
+      email: 'email',
+      name: 'name'
+    }
   }
 
   const mockAxiosresponse: AxiosResponse<any> = {

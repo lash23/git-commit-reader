@@ -20,7 +20,6 @@ export class TableItemComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    console.log(this.commit);
     this.setCommitDetails();
   }
 
