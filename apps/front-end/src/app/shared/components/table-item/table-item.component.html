@@ -10,7 +10,7 @@
           [href]="commitUrl"
           target="_blank"
         >
-          {{ message }}
+          {{ message?.length! < 80 ? message : (message | slice:0:80) + '...' }}
         </a>
         <p class="text-xs leading-3 text-gray-600 mt-2">
           {{ author }}
