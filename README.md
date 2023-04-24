@@ -20,11 +20,30 @@ Main project folders and files are listed below.
 	- app-config/ (just a library to handle project config files)
 - package.json (all the dependencies needed by the project, back-end and front-end included)
 
+## Prerequisites
+1. Have Node installed on the system.
+2. Have npm installed on the system and use a version greater than or equal to 5.2.
+
 ## Usage
 
 1. Install the project dependencies by running: `npm install`
-2. Run back-end tests: `nx test back-end`
-3. Run front-end tests: `nx test front-end`
-4. Start back-end app: `nx serve back-end` (back-end server will run at http://localhost:3000/api)
-5. Start front-end app (run this one in a different shell or command line tab): `nx serve front-end` (front-end server will run at http://localhost:4200)
+2. Run back-end tests: `npx nx test back-end`
+3. Run front-end tests: `npx nx test front-end`
+4. Start back-end app: `npx nx serve back-end` (back-end server will run at http://localhost:3000/api)
+5. Start front-end app (run this one in a different shell or command line tab): `npx nx serve front-end` (front-end server will run at http://localhost:4200)
 6. Take a look to the front end by visitting http://localhost:4200 on your browser.
+
+## Troubleshooting
+If you are using a version of `npm` lower than version 5.2 you will notice that you do not have npx installed on your system (unless you have installed it manually before) and therefore the commands listed in the Instructions section will not work.
+
+Using npx prevents you from having to install the Nx framework on your system, so its use is recommended.
+
+If upgrading your npm version is not an option for you, you can manually install npx on your system:
+
+to install npx in the project folder:
+
+`npm i npx`
+
+to install npx globally:
+
+`npm i -g npx`
